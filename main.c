@@ -1,5 +1,7 @@
 #include "monty.h"
 
+int number = -1;
+
 /**
  * main - program execute
  * @argc: The number of command line arguments
@@ -35,11 +37,16 @@ int main(int argc, char **argv)
 		token = strtok(str, " ");
         token2 = strtok(NULL, " ");
 
+        if(token2)
+            number = atoi(token2);
+        else
+            number = -1;
         if(token[0] != '\n')
-        {
             get_op(&stack, token, n_line)(&stack, n_line);
-        }
-
+        n_line++;
 	}
 
+    clean(&stack);
+    fclose(fd);
+    return (EXIT_SUCCESS);
 }
