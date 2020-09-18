@@ -40,6 +40,7 @@ extern int number;
 
 void (*get_op(stack_t **st, char *s, int lnum))(stack_t **, unsigned int);
 void _push(stack_t **stack, unsigned int line_number);
+void _pall(stack_t **stack, unsigned int line_number);
 
 void clean(stack_t **stack);
 

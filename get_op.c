@@ -12,6 +12,7 @@ void (*get_op(stack_t **st, char *s, int lnum))(stack_t **, unsigned int)
 {
 	instruction_t ops[] = {
 		{"push", _push},
+		{"pall", _pall},
 		{NULL, NULL}
 	};
 	int i = 0;
